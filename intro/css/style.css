@@ -6,17 +6,17 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
   min-height: 100vh;
   color: white;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
 }
 
 .dashboard {
   width: 95%;
-  /* min-height: 95vh; */
+  min-height: 95vh;
   margin: 20px auto;
-  border-radius: 20px;
   overflow: hidden;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -25,46 +25,41 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   padding: 25px 50px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-.logo {
+.navbar .logo {
   font-size: 48px;
   font-weight: bold;
   color: #38bdf8;
 }
-
-.nav-links {
+.navbar .nav-links {
   display: flex;
   gap: 20px;
   list-style: none;
 }
-
-.nav-links a {
+.navbar .nav-links a {
   display: inline-block;
   padding: 14px 32px;
   border-radius: 14px;
-  background: linear-gradient(to right, #38bdf8, #0ea5e9);
   color: white;
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-  transform: translateY(-4px);
+  transition: 0.3s ease;
   background: linear-gradient(to right, #38bdf8, #6366f1);
+}
+.navbar .nav-links a:hover {
+  transform: translateY(-4px);
   box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
 }
 
 .hero {
   padding: 120px 100px;
 }
-
 .hero h1 {
   font-size: 70px;
   margin-bottom: 20px;
@@ -72,50 +67,44 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .hero p {
-  font-size: 24px;
-  color: #cbd5e1;
-  margin-bottom: 40px;
   max-width: 600px;
+  margin-bottom: 40px;
+  font-size: 24px;
   line-height: 1.6;
+  color: #cbd5e1;
 }
-
-.hero-btn {
+.hero .hero-btn {
   display: inline-block;
   padding: 15px 35px;
   border-radius: 12px;
-  background: linear-gradient(to right, #38bdf8, #6366f1);
   color: white;
+  text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-  text-decoration: none;
   transition: 0.3s ease;
   box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+  background: linear-gradient(to right, #38bdf8, #6366f1);
 }
-.hero-btn:hover {
+.hero .hero-btn:hover {
   transform: translateY(-4px) scale(1.03);
   box-shadow: 0 15px 30px rgba(56, 189, 248, 0.5);
 }
 
-/* .carousel-section {
+.carousel-section {
   padding: 60px 40px;
-} */
-
-.carousel-title {
-  text-align: center;
-  font-size: 42px;
-  margin-bottom: 40px;
-  color: white;
 }
-
-.carousel-container {
-  position: relative;
+.carousel-section .carousel-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 42px;
+}
+.carousel-section .carousel-container {
   display: flex;
   align-items: center;
+  position: relative;
 }
-
-.carousel-track {
+.carousel-section .carousel-track {
   display: flex;
   gap: 25px;
   overflow-x: auto;
@@ -123,38 +112,32 @@ body {
   padding: 20px;
   scrollbar-width: none;
 }
-
-.carousel-track::-webkit-scrollbar {
+.carousel-section .carousel-track::-webkit-scrollbar {
   display: none;
 }
 
 .card {
   min-width: 350px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
   overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   flex-shrink: 0;
   transition: 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(56, 189, 248, 0.3);
 }
-
 .card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
-
 .card h3 {
-  font-size: 28px;
   padding: 20px 20px 10px;
-  color: white;
+  font-size: 28px;
 }
-
 .card p {
   padding: 0 20px 25px;
   color: #cbd5e1;
@@ -170,46 +153,19 @@ body {
   font-size: 28px;
   cursor: pointer;
   transition: 0.3s ease;
-  flex-shrink: 0;
 }
-
 .arrow:hover {
   background: #38bdf8;
   transform: scale(1.1);
 }
 
-@keyframes slideAnimation {
-  0%, 25% {
-    transform: translateX(0);
-  }
-  33%, 58% {
-    transform: translateX(-100vw);
-  }
-  66%, 91% {
-    transform: translateX(-200vw);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@media (max-width: 992px) {
-  .hero {
-    padding: 80px 50px;
-  }
-  .hero h1 {
-    font-size: 52px;
-  }
-  .hero p {
-    font-size: 20px;
-  }
-}
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     gap: 25px;
     text-align: center;
   }
-  .nav-links {
+  .navbar .nav-links {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -225,9 +181,6 @@ body {
   }
   .card {
     min-width: 280px;
-  }
-  .carousel-title {
-    font-size: 32px;
   }
 }
 @media (max-width: 480px) {

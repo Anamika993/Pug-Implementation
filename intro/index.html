@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- ================= NAVBAR =================-->
+      <nav class="navbar">
+        <div class="logo">Logo</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- ================= CAROUSEL =================-->
+      <section class="carousel-section">
+        <div class="carousel-container">
+          <button class="arrow left">&#10094;</button>
+          <div class="carousel-track">
+            <div class="card"><img src="https://picsum.photos/400/250?random=1">
+              <h3>Slide One</h3>
+              <p>First slide description</p>
+            </div>
+            <div class="card"><img src="https://picsum.photos/400/250?random=2">
+              <h3>Slide Two</h3>
+              <p>Second slide description</p>
+            </div>
+            <div class="card"><img src="https://picsum.photos/400/250?random=3">
+              <h3>Slide Three</h3>
+              <p>Third slide description</p>
+            </div>
+            <div class="card"><img src="https://picsum.photos/400/250?random=4">
+              <h3>Slide Four</h3>
+              <p>Fourth slide description</p>
+            </div>
+          </div>
+          <button class="arrow right">&#10095;</button>
+        </div>
+      </section>
+      <!-- ================= HERO =================-->
+      <section class="hero">
+        <h1>Heading 1</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Accusamus reprehenderit.
+        </p><a class="hero-btn" href="#">Get Started</a>
+      </section>
+    </div>
+    <!-- ================= SCRIPT =================-->
+    <script>
+      const track = document.querySelector('.carousel-track');
+      
+      document.querySelector('.right').addEventListener('click', () => {
+        track.scrollBy({
+          left: 400,
+          behavior: 'smooth'
+        });
+      });
+      
+      document.querySelector('.left').addEventListener('click', () => {
+        track.scrollBy({
+          left: -400,
+          behavior: 'smooth'
+        });
+      });
+    </script>
+  </body>
+</html>

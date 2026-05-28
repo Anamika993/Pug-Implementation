@@ -1,0 +1,106 @@
+doctype html
+
+html(lang="en")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    title Dashboard
+
+    link(rel="stylesheet", href="./css/style.css")
+
+  body
+
+    .dashboard
+
+      // ================= NAVBAR =================
+
+      nav.navbar
+
+        .logo Logo
+
+        ul.nav-links
+
+          li
+            a(href="index.html") Home
+
+          li
+            a(href="about.html") About
+
+          li
+            a(href="work.html") Work
+
+          li
+            a(href="contact.html") Contact
+
+      // ================= CAROUSEL =================
+
+      section.carousel-section
+
+        .carousel-container
+
+          button.arrow.left &#10094;
+
+          .carousel-track
+
+            .card
+              img(src="https://picsum.photos/400/250?random=1")
+
+              h3 Slide One
+
+              p First slide description
+
+            .card
+              img(src="https://picsum.photos/400/250?random=2")
+
+              h3 Slide Two
+
+              p Second slide description
+
+            .card
+              img(src="https://picsum.photos/400/250?random=3")
+
+              h3 Slide Three
+
+              p Third slide description
+
+            .card
+              img(src="https://picsum.photos/400/250?random=4")
+
+              h3 Slide Four
+
+              p Fourth slide description
+
+          button.arrow.right &#10095;
+
+      // ================= HERO =================
+
+      section.hero
+
+        h1 Heading 1
+
+        p
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          | Accusamus reprehenderit.
+
+        a.hero-btn(href="#") Get Started
+
+    // ================= SCRIPT =================
+
+    script.
+      const track = document.querySelector('.carousel-track');
+
+      document.querySelector('.right').addEventListener('click', () => {
+        track.scrollBy({
+          left: 400,
+          behavior: 'smooth'
+        });
+      });
+
+      document.querySelector('.left').addEventListener('click', () => {
+        track.scrollBy({
+          left: -400,
+          behavior: 'smooth'
+        });
+      });
